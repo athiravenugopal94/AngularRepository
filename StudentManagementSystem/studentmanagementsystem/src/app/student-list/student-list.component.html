@@ -1,0 +1,37 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Student List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Subject 1 (%)</th>
+            <th>Subject 2 (%)</th>
+            <th>Subject 3 (%)</th>
+            <th>Subject 4 (%)</th>
+            <th>Subject 5 (%)</th>
+            <th *ngIf="showBtn" >Pass/Fail</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students | async">
+            <td>{{student.name}}</td>
+            <td>{{student.subject_1}}</td>
+            <td>{{student.subject_2}}</td>
+            <td>{{student.subject_3}}</td>
+            <td>{{student.subject_4}}</td>
+            <td>{{student.subject_5}}</td>
+            <td *ngIf="showBtn" >{{student.passpercentage}}</td>
+            <td><button *ngIf="showBtn" (click)="deleteStudent(student.id)" class="btn btn-danger">Delete</button>
+                <button (click)="studentDetails(student.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button *ngIf="showBtn" (click)="getStudent(student.id)" class="btn btn-success">Update</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

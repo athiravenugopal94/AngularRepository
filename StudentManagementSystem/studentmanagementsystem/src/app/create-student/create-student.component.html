@@ -1,0 +1,50 @@
+<h3>Create Student</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form ngNativeValidate (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="student.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Subject 1 (%)</label>
+      <input type="text" class="form-control" id="subject" required [(ngModel)]="student.subject_1" name="subject">
+    </div>
+    <div class="form-group">
+      <label for="name">Subject 2 (%)</label>
+      <input type="text" class="form-control" id="subject" required [(ngModel)]="student.subject_2" name="subject">
+    </div>
+    <div class="form-group">
+      <label for="name">Subject 3 (%)</label>
+      <input type="text" class="form-control" id="subject" required [(ngModel)]="student.subject_3" name="subject">
+    </div>
+    <div class="form-group">
+      <label for="name">Subject 4 (%)</label>
+      <input type="text" class="form-control" id="subject" required [(ngModel)]="student.subject_4" name="subject">
+    </div>
+    <div class="form-group">
+      <label for="name">Subject 5 (%)</label>
+      <input type="text" class="form-control" id="subject" required [(ngModel)]="student.subject_5" name="subject">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Pass/Fail</label>
+      <!-- <input type="text" class="form-control" id="passpercentage" required [(ngModel)]="student.passpercentage" name="passpercentage"> -->
+      <select class="form-control" id="passpercentage" required [(ngModel)]="student.passpercentage" name="passpercentage">
+        <option value='1'>Pass</option>
+        <option value='2'>Fail</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newStudent()">Add</button> -->
+</div>
+<div [hidden]="submitted">
+  <h4>Fill in the mandatory fields</h4>
+  <!-- <button class="btn btn-success" (click)="newStudent()">Add</button> -->
+</div>

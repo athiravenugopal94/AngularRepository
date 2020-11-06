@@ -1,0 +1,37 @@
+<h3>Update Student</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="student.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="subject_1">Subject 1 (%)</label>
+      <input type="number" class="form-control" id="subject_1" required [(ngModel)]="student.subject_1" name="subject_1">
+    </div>
+    <div class="form-group">
+      <label for="subject_2">Subject 2 (%)</label>
+      <input type="number" class="form-control" id="subject_2" required [(ngModel)]="student.subject_2" name="subject_2">
+    </div>
+    <div class="form-group">
+      <label for="subject_3">Subject 3 (%)</label>
+      <input type="number" class="form-control" id="subject_3" required [(ngModel)]="student.subject_3" name="subject_3">
+    </div>
+    <div class="form-group">
+      <label for="subject_4">Subject 4 (%)</label>
+      <input type="number" class="form-control" id="subject_4" required [(ngModel)]="student.subject_4" name="subject_4">
+    </div>
+    <div class="form-group">
+      <label for="subject_5">Subject 5 (%)</label>
+      <input type="number" class="form-control" id="subject_5" required [(ngModel)]="student.subject_5" name="subject_5">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Pass/Fail</label>
+      <input type="text" class="form-control" id="passpercentage" required [(ngModel)]="student.passpercentage" name="passpercentage">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
